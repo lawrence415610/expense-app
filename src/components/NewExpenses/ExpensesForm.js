@@ -49,6 +49,8 @@ function ExpensesForm(props) {
     setEnterDate("");
   };
 
+
+
   return (
     <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
@@ -80,8 +82,13 @@ function ExpensesForm(props) {
             onChange={enterDateChangeHandler}
           />
         </div>
-        <div className="new-expense__control">
-          <button type="submit">Add Expenses</button>
+        <div className="new-expense__actions">
+          <div>
+            <button type="button" onClick={props.onCancelClicked}>Cancel</button>
+          </div>
+          <div>
+            <button type="submit">Add Expenses</button>
+          </div>
         </div>
       </div>
     </form>
